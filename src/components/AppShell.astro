@@ -1,0 +1,33 @@
+---
+export interface Props {
+  title: string;
+  path: string;
+}
+
+const { title, path } = Astro.props;
+
+const CApp = await import(path).then((a) => a.default);
+---
+
+<div>
+  <div id="app-icon" class="aspect-square w-10 bg-yellow-100"></div>
+  <span>{title}</span>
+
+  <div id="app-shell-wrapper" class="hidden">
+    <CApp />
+  </div>
+</div>
+
+<script>
+  const folder = document.getElementById("app-icon");
+  const appShellWrapper = document.getElementById("app-shell-wrapper");
+
+  folder.onclick = () => {
+    if (appShellWrapper.style.display === "block") {
+      appShellWrapper.style.display = "none";
+      return;
+    }
+
+    appShellWrapper.style.display = "block";
+  };
+</script>
