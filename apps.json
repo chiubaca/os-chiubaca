@@ -1,6 +1,12 @@
 [
   {
+    "appId": "react-counter",
     "title": "React Counter",
-    "path": "../apps/ReactCounter/index.astro"
+    "appDir": "ReactCounter"
+  },
+  {
+    "appId": "react-counter-2",
+    "title": "React Counter2 ",
+    "appDir": "ReactCounter"
   }
 ]
