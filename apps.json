@@ -1,6 +1,6 @@
 [
   {
-    "title": "React App",
-    "path": "../apps/ReactApp/Index.astro"
+    "title": "React Counter",
+    "path": "../apps/ReactCounter/index.astro"
   }
 ]
