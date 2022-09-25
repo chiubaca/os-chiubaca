@@ -1,6 +1,6 @@
 import React from "react";
 
-const ReactApp = () => {
+const ReactCounter = () => {
   let [counter, setCounter] = React.useState<number>(1);
 
   return (
@@ -21,4 +21,4 @@ const ReactApp = () => {
   );
 };
 
-export default ReactApp;
+export default ReactCounter;

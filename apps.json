@@ -1,12 +1,12 @@
 [
   {
-    "appId": "react-counter",
     "title": "React Counter",
-    "appDir": "ReactCounter"
+    "appId": "react-counter",
+    "appDir": "react-counter"
   },
   {
-    "appId": "react-counter-2",
     "title": "React Counter2 ",
-    "appDir": "ReactCounter"
+    "appId": "react-counter-2",
+    "appDir": "react-counter"
   }
 ]
