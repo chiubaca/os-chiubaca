@@ -1,21 +1,19 @@
 import React from "react";
 
 const ReactCounter = () => {
-  let [counter, setCounter] = React.useState<number>(1);
+  let [counter, setCounter] = React.useState<number>(0);
 
   return (
     <>
       <div>This is a react component</div>
 
-      {counter}
-
       <button
-        className="border  border-gray-700"
+        className="g-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
         onClick={() => {
           setCounter(counter++);
         }}
       >
-        increment
+        Clicked {counter} times
       </button>
     </>
   );
