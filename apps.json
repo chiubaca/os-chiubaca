@@ -1,12 +1,10 @@
 [
   {
     "title": "React Counter",
-    "appId": "react-counter",
-    "appDir": "react-counter"
+    "appId": "react-counter"
   },
   {
-    "title": "React Counter2 ",
-    "appId": "react-counter-2",
-    "appDir": "react-counter"
+    "title": "Svelte Counter",
+    "appId": "svelte-counter"
   }
 ]

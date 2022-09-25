@@ -24,7 +24,7 @@ import AppsRegistry from "../../apps.json";
   for (let item of allApps) {
     const appId = (item as any).dataset.appId;
 
-    const appIcon = document.getElementById(appId);
+    const appIcon = document.getElementById(`${appId}-icon`);
 
     const appShellContainer = document.getElementById(`${appId}-container`);
     const dragHandle = document.getElementById(`${appId}-container-bar`);
