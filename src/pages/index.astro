@@ -6,7 +6,7 @@ import AppsRegistry from "../../apps.json";
 
 <App title="chiubaca os">
   <main class="w-screen h-screen bg-emerald-50">
-    <div id="all-apps" class="flex p-12">
+    <div id="all-apps" class="flex p-12 gap-5">
       {
         AppsRegistry.map((app, index) => {
           return <AppShell index={index} {...app} />;
@@ -17,6 +17,8 @@ import AppsRegistry from "../../apps.json";
 </App>
 
 <script>
+  import { makeElementDraggable } from "../helpers/makeElementDraggable";
+
   const allApps = document.getElementById("all-apps").children;
 
   for (let item of allApps) {
@@ -25,10 +27,14 @@ import AppsRegistry from "../../apps.json";
     const appIcon = document.getElementById(appId);
 
     const appShellContainer = document.getElementById(`${appId}-container`);
+    const dragHandle = document.getElementById(`${appId}-container-bar`);
 
+    // Toggle app on/off
     appIcon.onclick = () =>
       appShellContainer.style.display === "block"
         ? (appShellContainer.style.display = "none")
         : (appShellContainer.style.display = "block");
+
+    makeElementDraggable(appShellContainer, dragHandle);
   }
 </script>
