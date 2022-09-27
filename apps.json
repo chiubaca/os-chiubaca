@@ -6,5 +6,9 @@
   {
     "title": "Svelte Counter",
     "appId": "svelte-counter"
+  },
+  {
+    "title": "Vue Counter",
+    "appId": "vue-counter"
   }
 ]
