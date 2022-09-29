@@ -1,0 +1,9 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Web437_IBM_VGA";
+  src: url("../public/fonts/Web437_IBM_VGA_8x16.woff");
+}

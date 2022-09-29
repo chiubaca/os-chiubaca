@@ -7,5 +7,10 @@ import vue from "@astrojs/vue";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), svelte(), vue()]
+  integrations: [
+    tailwind({ config: { applyBaseStyles: false } }),
+    react(),
+    svelte(),
+    vue(),
+  ],
 });
