@@ -1,0 +1,21 @@
+---
+export interface Props {
+  appId: string;
+  title: string;
+}
+
+const { appId, title } = Astro.props;
+
+const iconPath = await import(`../../apps/${appId}/icon.svg`).then(
+  (a) => a.default
+);
+---
+
+<div id={`${appId}-icon`} class="flex flex-col items-center">
+  <button
+    class={`app-icon aspect-square w-10 bg-no-repeat bg-center`}
+    style={`background-image: url('${iconPath}')`}
+  >
+  </button>
+  <span>{title}</span>
+</div>

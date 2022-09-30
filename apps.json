@@ -1,7 +1,8 @@
 [
   {
     "title": "React Counter",
-    "appId": "react-counter"
+    "appId": "react-counter",
+    "launchOnStart": true
   },
   {
     "title": "Svelte Counter",

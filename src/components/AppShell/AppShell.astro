@@ -1,0 +1,25 @@
+---
+import DesktopIcon from "./DesktopIcon.astro";
+import ShellContainer from "./ShellContainer.astro";
+
+export interface Props {
+  index: number;
+  appId: string;
+  title: string;
+  launchOnStart?: boolean;
+}
+
+const { index, appId, title, launchOnStart } = Astro.props;
+
+const App = await import(`../../apps/${appId}/index.astro`).then(
+  (a) => a.default
+);
+---
+
+<div id={String(index)} data-app-id={appId}>
+  <DesktopIcon title={title} appId={appId} />
+
+  <ShellContainer title={title} appId={appId} launchOnStart={launchOnStart}>
+    <App />
+  </ShellContainer>
+</div>
